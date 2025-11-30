@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RSVisuals + Design Studio — Arch. Ren Calayag & Arch. Sidney Gomez</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0b0d;
+      --muted:#9aa1a8;
+      --accent:#00d1b2;
+      --card:#0f1113;
+      --glass: rgba(255,255,255,0.04);
+      --maxw:1200px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;
+      background:linear-gradient(180deg,var(--bg),#070708 60%);
+      color:#fff;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+      padding-bottom:80px;
+    }
+    .container{max-width:var(--maxw);margin:0 auto;padding:36px}
+
+    /* Header */
+    header{display:flex;align-items:center;justify-content:space-between;padding:20px 0}
+    .brand{display:flex;gap:16px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#3ad6ff);display:flex;align-items:center;justify-content:center;font-weight:900;color:#071118}
+    .site-title{font-weight:800;letter-spacing:0.2px}
+    nav a{color:var(--muted);text-decoration:none;margin-left:20px;font-weight:600}
+    nav a.cta{color:#071118;background:#fff;padding:10px 14px;border-radius:8px}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:40px;align-items:center;padding:40px 0}
+    .hero .eyebrow{color:var(--accent);font-weight:700}
+    .hero h1{font-size:42px;margin:16px 0 12px;line-height:1.02;letter-spacing:-0.6px}
+    .hero p.lead{color:var(--muted);max-width:70%}
+    .hero .cta-row{margin-top:22px}
+    .btn{display:inline-block;padding:12px 18px;border-radius:10px;font-weight:700;text-decoration:none}
+    .btn-primary{background:var(--accent);color:#071118}
+    .btn-ghost{border:1px solid rgba(255,255,255,0.06);color:var(--muted);background:transparent}
+
+    /* Right column project preview */
+    .preview-card{background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));padding:18px;border-radius:12px}
+    .preview-card img{width:100%;height:260px;object-fit:cover;border-radius:8px}
+    .preview-meta{display:flex;justify-content:space-between;align-items:center;margin-top:12px}
+    .preview-meta small{color:var(--muted)}
+
+    /* About & Services */
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:36px;margin-top:40px}
+    .card{background:var(--card);padding:22px;border-radius:12px}
+    h2{font-size:20px;margin:0 0 12px}
+    .muted{color:var(--muted)}
+    .values{display:flex;gap:12px;margin-top:12px}
+    .pill{background:var(--glass);padding:8px 12px;border-radius:999px;font-weight:600;color:var(--muted)}
+
+    /* Projects grid */
+    .projects{margin-top:40px}
+    .projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .proj{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:12px;border-radius:10px}
+    .proj img{width:100%;height:160px;object-fit:cover;border-radius:8px}
+    .proj h3{margin:10px 0 6px;font-size:16px}
+    .proj p{color:var(--muted);font-size:14px;margin:0}
+
+    /* Services list */
+    .services{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:12px}
+    .service{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:12px;border-radius:8px}
+
+    /* Contact */
+    footer{margin-top:48px;padding-top:22px;border-top:1px solid rgba(255,255,255,0.03)}
+    .contact-row{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+    .socials a{margin-left:12px;color:var(--muted);text-decoration:none;font-weight:700}
+
+    /* Responsive */
+    @media(max-width:980px){
+      .hero{grid-template-columns:1fr}
+      .preview-card img{height:220px}
+      .projects-grid{grid-template-columns:repeat(2,1fr)}
+      .split{grid-template-columns:1fr}
+    }
+    @media(max-width:600px){
+      .projects-grid{grid-template-columns:1fr}
+      header{flex-direction:column;align-items:flex-start;gap:12px}
+      nav a{margin-left:8px}
+      .hero h1{font-size:32px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">RS</div>
+        <div>
+          <div class="site-title">RSVisuals + Design Studio</div>
+          <div class="muted">Arch. Ren Calayag & Arch. Sidney Gomez</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#services">Services</a>
+        <a href="#contact" class="cta">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Modern Architecture & Visualization</div>
+        <h1>Transform your ideas into stunning visuals with <span style="color:var(--accent)">RSVisuals + Design Studio</span></h1>
+        <p class="lead">Results-driven Architecture professionals with expertise in residential, commercial, and hospitality projects. We blend design innovation with practical execution to deliver functional, aesthetically refined solutions that elevate client brands.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#projects">View Projects</a>
+          <a class="btn btn-ghost" href="#about">About</a>
+        </div>
+
+        <div id="about" class="split">
+          <div class="card">
+            <h2>About</h2>
+            <p class="muted"><strong>Arch. Ren Calayag & Arch. Sidney Gomez</strong></p>
+            <p>Results-driven Architecture professionals with 5+ years of experience in designing and managing residential, commercial, and hospitality projects. Skilled in space planning, project documentation, 3D visualization, and site supervision, with a strong commitment to delivering functional and aesthetically refined solutions. Passionate about blending design innovation with practical execution to meet client goals and enhance brand identity.</p>
+
+            <h3 style="margin-top:16px">Experience</h3>
+            <p class="muted">Residential and commercial structures</p>
+
+            <h3 style="margin-top:12px">Design Philosophy</h3>
+            <p class="muted">Design starts when you understand your client's needs.</p>
+
+            <div class="values">
+              <div class="pill">Sustainability</div>
+              <div class="pill">Practicality</div>
+              <div class="pill">Efficiency</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h2>Services</h2>
+            <div class="services">
+              <div class="service"><strong>Complete Architectural Drafting</strong><div class="muted">Plans, elevations, sections & documentation.</div></div>
+              <div class="service"><strong>Architectural Visualization</strong><div class="muted">High-quality 3D renderings & walkthroughs.</div></div>
+              <div class="service"><strong>Estimation</strong><div class="muted">Quantity takeoffs & cost estimates.</div></div>
+              <div class="service"><strong>Sign & Sealed Plans</strong><div class="muted">Regulatory submission-ready drawings.</div></div>
+              <div class="service"><strong>Construction</strong><div class="muted">Site supervision & coordination.</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="preview-card">
+        <img src="assets/images/placeholder.jpg" alt="Project preview"/>
+        <div class="preview-meta">
+          <div>
+            <div style="font-weight:700">Residential Villa — Taguig</div>
+            <small class="muted">2024 • 420 sqm • Interior + Exterior</small>
+          </div>
+          <div class="muted">View case</div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="projects" class="projects">
+      <h2>Selected Projects</h2>
+      <div class="projects-grid">
+        <div class="proj">
+          <img src="assets/images/placeholder.jpg" alt="Project 1"/>
+          <h3>Urban Residence</h3>
+          <p class="muted">Residential • 2023 • 180 sqm</p>
+        </div>
+        <div class="proj">
+          <img src="assets/images/placeholder.jpg" alt="Project 2"/>
+          <h3>Coastal Retreat</h3>
+          <p class="muted">Hospitality • 2022 • 520 sqm</p>
+        </div>
+        <div class="proj">
+          <img src="assets/images/placeholder.jpg" alt="Project 3"/>
+          <h3>Commercial Fit-out</h3>
+          <p class="muted">Commercial • 2024 • 300 sqm</p>
+        </div>
+      </div>
+    </section>
+
+    <footer id="contact">
+      <div class="contact-row">
+        <div>
+          <div style="font-weight:800">Get in touch</div>
+          <div class="muted">Email: <a href="mailto:ren@rsvisuals.com" style="color:var(--accent);text-decoration:none">ren@rsvisuals.com</a> • Phone: +63 9XX XXX XXXX</div>
+        </div>
+        <div class="socials">
+          <a href="#">Behance</a>
+          <a href="#">Instagram</a>
+          <a href="#">LinkedIn</a>
+        </div>
+      </div>
+      <div class="muted" style="font-size:13px">© RSVisuals + Design Studio — Arch. Ren Calayag & Arch. Sidney Gomez</div>
+    </footer>
+
+  </div>
+</body>
+</html>
